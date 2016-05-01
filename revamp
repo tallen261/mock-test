@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mock Test</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous">
+</script>
+
+</head>
+<body>
+<h1>Question #1</h1>
+<p>If a client wanted to design a logo using a vector based medium, what program would be the best choice?</p>
+<ol>
+	<li>
+		<button id="photoshop" data-answer-nr="1" data-name="paulo">Adobe Photoshop</button>
+	</li>
+	<br>
+
+	<li>
+		<button id="illustrator" data-answer-nr="2">Adobe Illustrator</button>
+	</li>
+	<br>	
+
+	<li>
+		<button id="indesign" data-answer-nr="3">Adobe InDesign</button>
+	</li>
+	<br>
+
+	<li>
+		<button id="muse" data-answer-nr="4">Adobe Muse</button>
+	</li>
+
+
+
+
+
+</ol>
+<div id="message"></div>
+
+<script type="text/javascript">
+	$("button").click(function(){
+
+		var answerNr = parseInt($(this).data("answer-nr"));
+
+		switch(answerNr) {
+			case 1:
+				send_message("wrong");
+				break;
+			case 2:
+				send_message("correct");
+				break;
+			case 3:
+				send_message("wrong");
+				break;
+			case 4:
+				send_message("wrong");
+				break;
+		}
+
+		// if (answerNr == 1) {
+		// 	send_message("wrong");
+		// } else if(answerNr == 2) {
+		// 	send_message("corrct");
+		// } else if(answerNr == 3) {
+		// 	send_message("wrong");
+		// } else if(answerNr == 4){
+		// 	send_message("wrong");
+		// } else {
+		// 	
+		// }
+
+		//switch(answerNr) {
+		//	case 2:
+		//		send_message("correct");
+		//		break;
+		//	default:
+		//		send_message("wrong");
+		//		break;
+		//}
+
+		// if (answerNr == 2) {
+		//	send_message("correct");
+		// } else {
+		//	send_message("incorrect");
+		// }
+
+		// $(this).data("answer-nr")
+		// $(#id).data("answer-nr")
+	});
+
+	
+
+
+	// we create this function because we don't want to repeat the same code
+	// DRY principle - Don't Repeat Yourself
+	function send_message(message) {
+		// put here the message code
+		$("#message").html(message);
+	}
+
+	function wrong_reply_sound(){
+		// TODO: put the code here
+	}
+
+</script>
+	
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
