@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mock Test</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js">
+	<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous">
+	</script>
+	
+
+
+</head>
+<body>
+<div id="question" style="padding-left: 50px;">
+	<h1>Question #1</h1>
+	<p>If a client wanted to design a logo using a vector based medium, what program would be the best choice?</p>
+	<ol>
+		<li>
+			<button id="photoshop">Adobe Photoshop</button>
+		</li>
+		<br>
+
+		<li>
+			<button id="illustrator">Adobe Illustrator</button>
+		</li>
+		<br>	
+
+		<li>
+			<button id="indesign">Adobe InDesign</button>
+		</li>
+		<br>
+
+		<li>
+			<button id="muse">Adobe Muse
+			
+			</button>
+		</li>
+	</ol>
+</div>
+
+<div id="message"></div>
+<audio id="wronganswer" preload="auto">
+	<source src="http://www.ddtdigest.com/features/vacation/sounds/iknow.wav">
+		
+	</source>
+</audio>
+
+<div>
+	<img src="http://www.vectorgenius.com/images/Rendered/Rendered%20Vector/1-Bald%20Eagle%20Vector%20Graphics/Product%20Details/1-Rendered-Bald-Eagle-Vector-Graphics.png" style="padding-left: 50px;">
+</div>
+
+
+<!-- this is script code-->
+
+<script type="text/javascript">
+	var boo = new Audio ('http://www.ddtdigest.com/features/vacation/sounds/iknow.wav');
+	var cheer = new Audio ('http://www.steelersinhoboken.com/Downloads/Wavs/Crowd%20Cheering.wav');
+
+
+	$("#photoshop").click(function(){
+		// code for incorrect sound
+		boo.play();
+
+		// code for incorrect message
+		send_message("incorrect");
+	});
+
+	$("#illustrator").click(function(){
+		send_message("correct");
+		cheer.play()
+	});
+
+	$("#indesign").click(function(){
+		send_message("incorrect");
+		boo.play();
+	});
+
+	$("#muse").click(function(){
+		send_message("incorrect");
+		boo.play();
+	});
+
+
+	// we create this function because we don't want to repeat the same code
+	// DRY principle - Don't Repeat Yourself
+	function send_message(message) {
+		// put here the message code
+		$("#message").html(message);
+	}
+
+	function wrong_reply_sound(boo) {
+		// TODO: put the code here
+		
+}
+
+if (answer==correct){
+    send_message("correct");
+    cheer.play();
+}else if (answer==incorrect){
+    send message("incorrect");
+    boo.play();
+}
+</script>
+
+	
+
+
+</body>
+</html>
